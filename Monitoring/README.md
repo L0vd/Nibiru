@@ -58,6 +58,7 @@ mkdir nibiru-monitoring
 cd nibiru-monitoring
 wget https://raw.githubusercontent.com/L0vd/Nibiru/main/Monitoring/monitor.sh
 wget https://raw.githubusercontent.com/L0vd/Nibiru/main/Monitoring/telegraf.conf
+wget https://raw.githubusercontent.com/L0vd/Nibiru/main/Monitoring/variables.sh
 ```
 ```
 nano variables.sh
@@ -67,6 +68,7 @@ Insert your parameters to **variables.sh**:
 * full path to nibi binary to COS_BIN_NAME ( check ```which nibid```)
 * node PRC port to COS_PORT_RPC ( check in file ```path_to_nibiru_node_config/config/config.toml```)
 * node validator address to COS_VALOPER ( like ```nibivaloper********```)
+
 
 Save changes in variables.sh and enable execution permissions:
 
