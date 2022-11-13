@@ -25,7 +25,7 @@ echo "=================================================="
 sleep 2
 
 echo ''
-echo -e 'INSTALLING NIBIRU  NODE MONITORING'
+echo -e 'INSTALLING NIBIRU NODE MONITORING'
 
 sleep 2
 
