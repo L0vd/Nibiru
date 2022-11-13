@@ -59,6 +59,9 @@ cd nibiru-monitoring
 wget https://raw.githubusercontent.com/L0vd/Nibiru/main/Monitoring/monitor.sh
 wget https://raw.githubusercontent.com/L0vd/Nibiru/main/Monitoring/telegraf.conf
 ```
+```
+nano variables.sh
+```
 
 Insert your parameters to **variables.sh**:
 * full path to nibi binary to COS_BIN_NAME ( check ```which nibid```)
