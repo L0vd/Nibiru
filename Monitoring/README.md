@@ -58,8 +58,6 @@ mkdir nibiru-monitoring
 cd nibiru-monitoring
 wget https://raw.githubusercontent.com/L0vd/Nibiru/main/Monitoring/monitor.sh
 wget https://raw.githubusercontent.com/L0vd/Nibiru/main/Monitoring/telegraf.conf
-wget https://raw.githubusercontent.com/L0vd/Nibiru/main/Monitoring/variables.sh
-nano variables.sh
 ```
 
 Insert your parameters to **variables.sh**:
