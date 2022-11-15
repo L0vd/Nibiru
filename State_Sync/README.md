@@ -25,7 +25,7 @@ s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.nibid/config/config.toml
 
-peers="9afa29b9ee8b730353de871bd50d9fcc56eda73e@135.181.178.53:26656" \
+peers="6692cf5cc5ad3568d3195a5b009f5d6b05ccfc82@135.181.178.53:28656" \
 && sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.nibid/config/config.toml 
 
 nibid tendermint unsafe-reset-all --home ~/.nibid && sudo systemctl restart nibid && \
