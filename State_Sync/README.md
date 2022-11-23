@@ -14,6 +14,9 @@
 ### Copy the entire command
 ```
 sudo systemctl stop nibid
+nibid tendermint unsafe-reset-all --home ~/.nibid
+wget -qO $HOME/.nibid/config/addrbook.json https://raw.githubusercontent.com/L0vd/Nibiru/main/State_Sync/addrbook.json
+
 SNAP_RPC="http://135.181.178.53:28657"; \
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
@@ -28,7 +31,7 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.nibid/con
 peers="6692cf5cc5ad3568d3195a5b009f5d6b05ccfc82@135.181.178.53:28656" \
 && sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.nibid/config/config.toml 
 
-nibid tendermint unsafe-reset-all --home ~/.nibid && sudo systemctl restart nibid && \
+sudo systemctl restart nibid && \
 journalctl -u nibid -f --output cat
 ```
 
